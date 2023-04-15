@@ -1,0 +1,132 @@
+<app-navbar></app-navbar>
+<section class="section bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-title text-center mb-4 pb-2">
+            <h4 class="title">New &amp; Random Jobs</h4>
+            
+          </div>
+        </div>
+        <!--end col-->
+      </div>
+      <!--end row-->
+      <!--end row-->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="recent-jobs"
+              role="tabpanel"
+              aria-labelledby="recent-jobs-tab"
+            >
+              <div class="job-box card mt-4" *ngFor="let jobList of filteredJobLists">
+                <div class="bookmark-label text-center">
+                  <a
+                    
+                    class="text-white align-middle"
+                    ><i class="mdi mdi-star"></i
+                  ></a>
+                </div>
+                <div class="p-4">
+                  <div class="row align-items-center">
+                    <div class="col-md-2">
+                      <div class="text-center mb-4 mb-md-0">
+                        <a href="company-details.html"
+                          ><img
+                            src="https://main.dll6omdmjfwlk.amplifyapp.com/assets/images/featured-job/img-01.png"
+                            alt=""
+                            class="img-fluid rounded-3"
+                        /></a>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-md-3">
+                      <div class="mb-2 mb-md-0">
+                        <h5 class="fs-18 mb-1">
+                          <p class="text-dark"
+                            >Domain: {{jobList.domainName}}</p
+                          >
+                        </h5>
+                        <p class="text-muted fs-14 mb-0">
+                            Company name: {{jobList.companyName}}
+                        </p>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-md-3">
+                      <div class="d-flex mb-2">
+                        <div class="flex-shrink-0">
+                          <i
+                            class="mdi mdi-map-marker text-primary me-1"
+                          ></i>
+                        </div>
+                        <p class="text-muted mb-0">
+                          Location: {{jobList.location}}
+                        </p>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-md-2">
+                      <div>
+                        <p class="text-muted mb-2">
+                         Salary: <span class="text-primary">$</span>{{jobList.salary}}
+                        </p>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <!--end col-->
+                  </div>
+                  <!--end row-->
+                </div>
+                <div class="p-3 bg-light">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div>
+                        <p class="text-muted mb-0">
+                          <span class="text-dark">Experience :</span>
+                          {{jobList.experience}} years
+                        </p>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-lg-6 col-md-5">
+                      <div>
+                        <p class="text-muted mb-0">
+                          <span class="text-dark">Skills: </span>
+                          {{jobList.skills}}
+                        </p>
+                      </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-lg-2 col-md-3">
+                      <div class="text-start text-md-end">
+                        <a
+                          (click)="applyNowBtnClick(jobList)"
+                          data-bs-toggle="modal"
+                          class="primary-link"
+                          >Apply Now
+                          <i class="mdi mdi-chevron-double-right"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <!--end col-->
+                  </div>
+                  <!--end row-->
+                </div>
+              </div>
+              <!--end job-box-->
+              <!--end job-box-->
+            </div>
+            <!--end recent-jobs-tab-->
+            <!--end full-time-tab-->
+          </div>
+        </div>
+        <!--end col-->
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+  </section>
+  

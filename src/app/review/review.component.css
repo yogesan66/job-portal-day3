@@ -1,0 +1,50 @@
+.message-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F1F0FE;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    z-index: 90;
+  }
+  
+  .message-box {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  
+  .message-box textarea {
+    flex-grow: 1;
+    margin-right: 10px;
+    width:85vw;
+  }
+  
+  .message-box button {
+    flex-basis: 100px;
+  }
+  .body{
+    width:100vw;
+    height:100vh;
+    margin-top:-1rem;
+    background-color: #F1F0FE;
+    overflow:scroll;
+    padding-bottom: 5rem;
+  }
+  
+  .card-div{
+    display:flex;
+    
+    align-items: center;
+    justify-content: center;
+  }
+  .card-body:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0,  0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+  }
+  .cards-div{
+    overflow: auto;
+    margin-bottom:10rem;
+  }

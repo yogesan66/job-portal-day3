@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<section class="section bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-title text-center mb-4 pb-2">
+            <h4 class="title">Apply Job Now</h4>
+            <p class="text-muted mb-1">
+              Fill the required details to find your path
+            </p>
+          </div>
+        </div>
+        <!--end col-->
+      </div>
+<form [formGroup]="applyJobForm">
+    <div class="form-group">
+        <label for="formGroupExampleInput">Name :</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" [value]="" formControlName="name">
+    </div>
+    <br>
+    <div class="form-group">
+            <label for="formGroupExampleInput">Job Title :</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" [value]="" formControlName="jobTitle" >
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Experience :</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" [value]="" formControlName="experience" >
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Job Type :</label>
+        <div class="card w-75">
+            <div class="card-body">
+        <div class="custom-control custom-radio" *ngFor="let jobType of jobTypes">
+          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" [value]="jobType" (click)="jobTypeClick(jobType)">
+          <label class="custom-control-label" for="customRadio1">{{ jobType }}</label>
+        </div>
+        </div>
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Key Skills :</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" [value]="" formControlName="keySkills">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address :</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" formControlName="emailAddress">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Contact :</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" [value]="" formControlName="contact">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Upload Resume :</label>
+         <div class="custom-file">
+          <input type="file" class="custom-file-input" id="validatedCustomFile" required formControlName="uploadResume">
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit" *ngIf="!applyJobBtnClicked" [disabled]="!applyJobForm.valid" (click)="ApplyJob()">Apply</button>
+    <button class="btn btn-primary applybtn" type="button" disabled *ngIf="applyJobBtnClicked">
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    </button>
+  </form>
+  </div>
+  </section>
+  

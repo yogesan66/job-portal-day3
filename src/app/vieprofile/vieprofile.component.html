@@ -1,0 +1,156 @@
+<nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
+    <div class="container-fluid custom-container">
+      <a class="navbar-brand text-dark fw-bold me-auto" href="index.html">
+        <img
+          src="https://main.dll6omdmjfwlk.amplifyapp.com/assets/images/logo-dark.png"
+          height="22"
+          alt=""
+          class="logo-dark"
+        />
+        <img
+          src="https://main.dll6omdmjfwlk.amplifyapp.com/assets/images/logo-light.png"
+          height="22"
+          alt=""
+          class="logo-light"
+        />
+      </a>
+      <div>
+        <button
+          class="navbar-toggler me-3"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-label="Toggle navigation"
+        >
+          <i class="mdi mdi-menu"></i>
+        </button>
+      </div>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mx-auto navbar-center">
+      <li class="nav-item dropdown dropdown-hover">
+        <a
+          class="nav-link"
+          routerLink="/home"
+          id="homedrop"
+          role="button"
+          data-bs-toggle="dropdown"
+        >
+          Home
+          
+        </a>
+      </li>
+      <li class="nav-item dropdown dropdown-hover">
+        <a
+          class="nav-link"
+          
+          id="jobsdropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+        >
+          About     
+        </a>
+      </li>
+      <li class="nav-item dropdown dropdown-hover">
+        <a
+          class="nav-link"
+          
+          id="pagesdoropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+        >
+          Blog
+          
+        </a>
+      </li>
+      <!--end dropdown-->
+      <li class="nav-item dropdown dropdown-hover">
+        <a
+          class="nav-link"
+          id="productdropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Contact
+        </a>
+      </li>
+      <!--end dropdown-->
+      <li class="nav-item" id="productdropdown"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false">
+        <a class="nav-link">Post a Job</a>
+      </li>
+    </ul>
+    <!--end navbar-nav-->
+  </div>
+  </div>
+  </nav>
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-title text-center mb-4 pb-2">
+            <h4 class="title">View Profile</h4>
+            <p class="text-muted mb-1">
+              View your profile here that you have applied all the best for your future
+            </p>
+          </div>
+        </div>
+        <!--end col-->
+      </div>
+      <!--end row-->
+      <!--end row-->
+      <!--end row-->
+    </div>
+    <div class="profileTitle"><b>Candidate Profile:</b></div><br>
+    <div class="card text-center ">
+        <div class="card-body" *ngFor="let viewAppliedData of viewAppliedForm">
+            <div class="form-group row">
+                <label class="col-sm-6 col-form-label">Employee Name :</label>
+                <div class="col-sm-4">
+                  {{viewAppliedData.name}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-6 col-form-label">Job Title :</label>
+                <div class="col-sm-4">
+                    {{viewAppliedData.jobTitle}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-6 col-form-label">Experience :</label>
+                <div class="col-sm-4">
+                    {{viewAppliedData.experience}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-6 col-form-label">Job Type :</label>
+                <div class="col-sm-4">
+                    {{viewAppliedData.jobType}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-6 col-form-label">Skills :</label>
+                <div class="col-sm-4">
+                    {{viewAppliedData.keySkills}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-6 col-form-label">Email :</label>
+                <div class="col-sm-4">
+                    {{viewAppliedData.emailAddress}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-6 col-form-label">contact :</label>
+                <div class="col-sm-4">
+                    {{viewAppliedData.contact}}
+                </div>
+            </div>
+        </div>
+      </div>
+    <!--end container-->
+  </section>
+ 

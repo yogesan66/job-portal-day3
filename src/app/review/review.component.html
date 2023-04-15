@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="body">
+
+    <div class="container-fluid">
+        <h1 class="text-center text-secondary mb-10" style="padding-top:7rem;font-size: 1.5rem;margin-bottom: 2rem;">Share your thoughts and experience here with everyone</h1>
+
+        <div class="row">
+          <div class="col-md-11">
+            <div class="message-container">
+              <div class="message-box">
+                <textarea class="form-control" placeholder="Type your message here"></textarea>
+                <button class="btn btn-primary btn-send"(click)="onSendClick($event)" >
+                    <i class="fa-regular fa-paper-plane" style="font-size:1.4rem"></i>
+
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" *ngFor="let message of messages" class="card-div">
+          <div class="col-md-11">
+            <div class="card mb-3">
+              <div class="card-body">
+                <p class="card-text"><small class="text-muted">By <b>{{ message.gmailId }}</b>  on {{ message.date |date }}</small></p>
+                <p class="card-text" style="margin-left: 2rem;">{{ message.content }}</p>
+                <p class="card-text text-end"><small class="text-muted">{{ message.time.substring(0,5) }}</small></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+  

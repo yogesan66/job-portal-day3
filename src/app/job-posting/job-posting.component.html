@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="body">
+    <div class="conatiner">
+    <form [formGroup]="myForm" (ngSubmit)="post()">
+        <h2>Post a Job</h2>
+        
+        <div class="form-group">
+          <label for="companyName">Company Name</label>
+          <input type="text" class="form-control" id="companyName" formControlName="companyName">
+        </div>
+        
+        <div class="form-group">
+          <label for="domain">Domain</label>
+          <select class="form-control" id="domain" formControlName="domainName">
+            <option value="">-- Select Domain --</option>
+            <option *ngFor="let domain of domainNames">{{domain.name}}</option>
+
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="location">Location</label>
+          <select class="form-control" id="location" formControlName="location">
+            <option value="">-- Select Location --</option>
+            <option *ngFor="let location of Locations">{{location.name}}</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="salary">Salary</label>
+          <input type="number" class="form-control" id="salary" formControlName="salary">
+        </div>
+        
+        <div class="form-group">
+          <label for="experience">Experience</label>
+          <input type="number" class="form-control" id="experience" formControlName="experience">
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills</label>
+            <input type="text" class="form-control" id="skills" formControlName="skills">
+          </div>
+        
+        
+        
+        <div class="form-group">
+          <label for="vacancies">Vacancies</label>
+          <input type="number" class="form-control" id="vacancies" formControlName="vacancies">
+        </div>
+        
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Post Job</button>
+      </form>
+      </div>
+      
+</div>

@@ -1,0 +1,37 @@
+<div class="body">
+
+<div class="text-center col-12 display-6 " style="padding-top:3rem">
+   <h1>Welcome to Job Portal</h1>
+    </div>
+
+	<div class="container my-5">
+		<div class="row">
+			<!-- First Card -->
+			<div class="col-md-6 mb-4">
+				<div class="card">
+
+					<div class="card-body">
+                    <ng-lottie height="auto" [options]="searchingJobAnimation"></ng-lottie>
+ 
+                        <!-- <h1><b>Are you are job seeker ?</b></h1> -->
+					<p class="card-text">Are you here looking for a job ? </p>
+						<button class="btn btn-primary w-100 h-20" (click)="findJobs()">Find Jobs</button>
+					</div>
+				</div>
+			</div>
+			<!-- Second Card -->
+			<div class="col-md-6 mb-4">
+				<div class="card">
+
+					<div class="card-body">
+                        <ng-lottie height="15rem" [options]="hiringAnimation"></ng-lottie>
+                        <p class="card-text">Are you here to hire someone for a job ? </p>
+
+						<button class="btn btn-primary w-100 h-20" (click)="hire()">Hire for jobs</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,213 @@
+<div>
+    <nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
+      <div class="container-fluid custom-container">
+        
+        <div>
+          <button
+            class="navbar-toggler me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-label="Toggle navigation"
+          >
+            <i class="mdi mdi-menu"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse" *ngIf="jobseeker">
+          <ul class="navbar-nav mx-auto navbar-center">
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                routerLink="/home"
+                id="homedrop"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Home
+                
+              </a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                id="jobsdropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                About
+              </a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                id="pagesdoropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Blog
+                
+              </a>
+            </li>
+            <!--end dropdown-->
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                id="productdropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                routerLink="/contact-us"
+              >
+                Contact
+              </a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                id="productdropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                routerLink="/review"
+              >
+                Review          
+    </a>
+  </li>           
+  <!-- <li class="nav-item dropdown dropdown-hover">
+    <a
+            class="nav-link"
+            id="productdropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            routerLink="/post-a-job"
+          >
+            Post a Job          
+</a>
+        </li> -->
+            <!--end dropdown-->
+            <li class="nav-item" id="productdropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <!-- routerLink="/review"> -->
+              <!-- <a class="nav-link">Post a Job</a> -->
+              <!-- Review -->
+            </li>
+          </ul>
+          <!--end navbar-nav-->
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse" *ngIf="employer">
+          <ul class="navbar-nav mx-auto navbar-center">
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                routerLink="/post-a-job"
+                id="homedrop"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Post a Job
+                
+              </a>
+            </li>
+            <!-- <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                id="jobsdropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                About
+              </a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                id="pagesdoropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Blog
+                
+              </a>
+            </li> -->
+            <!--end dropdown-->
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                id="productdropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                routerLink="/contact-us"
+              >
+                Contact
+              </a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a
+                class="nav-link"
+                id="productdropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                routerLink="/review"
+              >
+                Review          
+    </a>
+  </li>           
+  <!-- <li class="nav-item dropdown dropdown-hover">
+    <a
+            class="nav-link"
+            id="productdropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            routerLink="/post-a-job"
+          >
+            Post a Job          
+</a>
+        </li> -->
+            <!--end dropdown-->
+            <li class="nav-item" id="productdropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <!-- routerLink="/review"> -->
+              <!-- <a class="nav-link">Post a Job</a> -->
+              <!-- Review -->
+            </li>
+          </ul>
+          <!--end navbar-nav-->
+        </div>
+        <!--end navabar-collapse-->
+        <!--end header-menu-->
+      </div>
+      <!--end container-->
+          <!-- <a href="#" style="width:4rem">
+          <i class="fas fa-bell fa-lg" style="color:black;font-size:1.3rem;"></i>
+          <span class="badge badge-danger">{{notification.length}}</span>
+        </a> -->
+        
+
+     
+        <button class="pro-avatar" (click)="openPopup()">
+            <span >{{userEmailId.substring(0,1) | titlecase}}</span>
+        </button>
+
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <div class="popup-header">
+              <h4 class="popup-title">Popup Title</h4>
+              <button type="button" class="popup-close" (click)="openPopup()">&times;</button>
+            </div>
+            <div class="popup-body">
+              <p>Popup body text goes here.</p>
+            </div>
+          </div>
+        </div>
+        
+    </nav>
+ 

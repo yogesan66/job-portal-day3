@@ -1,0 +1,12 @@
+.passwordInvalid {
+    color:red;
+}
+
+.credentials-invalid {
+    border-color: red
+}
+
+.spinnerWidth {
+    width:85px;
+}
+    
